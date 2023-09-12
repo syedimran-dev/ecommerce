@@ -14,9 +14,17 @@
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
+                        
                     </x-nav-link>
                 </div>
             </div>
+            <div class="mt-3">
+                <a class="btn btn-primary text-center" href="{{route('post.index')}}">Product page</a>
+            </div>
+            <div class="mt-3">
+                <a class="btn btn-primary text-center" href="{{route('category.index')}}">Category page</a>
+            </div>
+            
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -37,7 +45,6 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
